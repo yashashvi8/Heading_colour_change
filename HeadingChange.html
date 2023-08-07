@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Heading color change</title>
+    </head>
+    <body align = "center">
+        <h1 id="id1">Heading color change</h1>
+        <br>
+        <label>Select background color</label><br><br>
+        <select id="bg">
+            <option value="yellow">yellow</option>
+            <option value="purple">purple</option>
+            <option value="green">green</option>
+        </select><br><br>
+        <label>Select font color</label><br><br>
+        <select id ="font">
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+        </select>
+        <br><br>
+        <button type="submit" onclick="func()">click</button>
+        <br><br><label id="l1"></label>
+        <script>
+            function func()
+{
+    var h = document.getElementById("id1");
+    var bg = document.querySelector('#bg');
+    var bg1 = bg.value;
+    var ft = document.querySelector('#font');
+    var ft1 = ft.value;
+    h.bgcolor = bg1;
+    if(bg1 != ft1){
+        h.style.color = ft1;    
+        h.style.backgroundColor = bg1;
+        document.getElementById("l1").innerHTML = "";
+    }
+    else
+    {
+        document.getElementById("l1").innerHTML = "Please select different font color and background color";
+    }
+    
+    
+}
+        </script>
+    </body>
+</html>
